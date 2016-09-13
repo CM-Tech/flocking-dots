@@ -77,6 +77,10 @@
                 .style("fill", "transparent"); //function(d, i) { return color(i % 3); });
 
             window.setInterval(function(e) {
+                if(w!=window.innerWidth||h!=window.innerHeight){
+                    w = window.innerWidth;
+                h = window.innerHeight;
+                }
                 var q = d3.geom.quadtree(nodes),
                     i = 0,
                     n = nodes.length;
