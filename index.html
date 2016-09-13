@@ -80,6 +80,9 @@
                 if(w!=window.innerWidth||h!=window.innerHeight){
                     w = window.innerWidth;
                 h = window.innerHeight;
+                 d3.select("svg")
+                .attr("width", w)
+                .attr("height", h);
                 }
                 var q = d3.geom.quadtree(nodes),
                     i = 0,
@@ -209,6 +212,9 @@
             window.onresize = function(e) {
                 w = window.innerWidth;
                 h = window.innerHeight;
+                 d3.select("svg")
+                .attr("width", w)
+                .attr("height", h);
             };
         </script>
 
